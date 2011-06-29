@@ -28,7 +28,7 @@ class Lookup
     }
 
   public:
-    string request(string *url)
+    string request(string* url)
     {
       // Create handle to the cURL object
       CURL *curl_handle;

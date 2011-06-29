@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=-lcurl
-SOURCES=main.cpp date.cpp controllers/lookup.cpp models/security.cpp views/console.cpp
+SOURCES=main.cpp date.cpp controllers/lookup.cpp models/ansi.cpp models/security.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=bin/fas
 INSTALL_DIR=/usr/local
