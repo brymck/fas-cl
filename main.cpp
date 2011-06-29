@@ -58,9 +58,11 @@ string do_web_request(string *url)
 
 int main(int argc, char* argv[])
 {
+  Console console;
   string *url = new string("http://www.bloomberg.com/apps/quote?ticker=");
   // strcat(url, "WFC:US");
   string content;
+  console.read();
   if (argv[1])
   {
     url->append((string)argv[1]);

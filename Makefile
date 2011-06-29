@@ -1,12 +1,12 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=-lcurl
-SOURCES=main.cpp console/ansi.cpp security.cpp
+SOURCES=main.cpp date.cpp security.cpp console/ansi.cpp console/console.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=bin/fas
+EXECUTABLE=fas
 INSTALL_DIR=/usr/local
 
-all: $(SOURCES) $(EXECUTABLE)
+all: $(SOURCES) bin/$(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
@@ -16,5 +16,8 @@ $(EXECUTABLE): $(OBJECTS)
 
 install:
 	install -m 0755 $(EXECUTABLE) $(INSTALL_DIR)/bin
+
+clean:
+	rm -rf $(OBJECTS)
 
 .PHONY: install
