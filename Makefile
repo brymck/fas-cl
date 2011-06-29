@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-c -Wall
-LDFLAGS=-lcurl -lboost_regex
+LDFLAGS=-lcurl
 SOURCES=main.cpp ansi.cpp security.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=fas
