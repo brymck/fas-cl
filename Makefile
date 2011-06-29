@@ -1,12 +1,12 @@
 CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=-lcurl
-SOURCES=main.cpp date.cpp security.cpp console/ansi.cpp console/console.cpp
+SOURCES=main.cpp date.cpp controllers/lookup.cpp models/security.cpp views/console.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=fas
+EXECUTABLE=bin/fas
 INSTALL_DIR=/usr/local
 
-all: $(SOURCES) bin/$(EXECUTABLE)
+all: $(SOURCES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
