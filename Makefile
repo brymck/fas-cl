@@ -3,7 +3,7 @@ CFLAGS=-c -Wall
 LDFLAGS=-lcurl
 SOURCES=main.cpp ansi.cpp security.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=fas
+EXECUTABLE=bin/fas
 
 all: $(SOURCES) $(EXECUTABLE)
 
